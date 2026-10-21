@@ -1,2 +1,1 @@
-def main() -> None:
-    print("Hello from lunar-lander!")
+"""Tools and experiments for Gymnasium's LunarLander environment."""
