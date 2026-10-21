@@ -1,0 +1,45 @@
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Experiment outputs
+outputs/
+runs/
+logs/
+wandb/
+checkpoints/
+
+# Trained model files
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Optional: uncomment if datasets should stay local
+# data/

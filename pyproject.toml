@@ -1,0 +1,21 @@
+[project]
+name = "lunar-lander"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "jt-manful", email = "johnmanful2002@hotmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "gymnasium[box2d,classic-control]>=1.4.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+]
+
+[project.scripts]
+lunar-lander = "lunar_lander:main"
+
+[build-system]
+requires = ["uv_build>=0.13.4,<0.14.0"]
+build-backend = "uv_build"
