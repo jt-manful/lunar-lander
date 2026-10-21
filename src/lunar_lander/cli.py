@@ -10,6 +10,7 @@ COMMANDS = (
     "train-ppo",
     "evaluate-ppo",
     "plot-ppo",
+    "record-landing",
 )
 
 
@@ -17,7 +18,7 @@ def main(argv: list[str] | None = None) -> None:
     arguments = list(sys.argv[1:] if argv is None else argv)
     parser = argparse.ArgumentParser(
         prog="lunar-lander",
-        description="Train and evaluate LunarLander agents.",
+        description="Train, evaluate, and record LunarLander agents.",
     )
     parser.add_argument("command", choices=COMMANDS)
 
@@ -45,6 +46,12 @@ def main(argv: list[str] | None = None) -> None:
         from lunar_lander.learning.ppo_train import main as command_main
     elif command == "evaluate-ppo":
         from lunar_lander.learning.evaluate_ppo import (
+            main as command_main,
+        )
+        command_main(remaining)
+        return
+    elif command == "record-landing":
+        from lunar_lander.learning.record_landing import (
             main as command_main,
         )
         command_main(remaining)
